@@ -196,17 +196,18 @@ class Hill_climbing(N_queens):
 				print("Unsolved")
 				break
 def main():
-	start = timer()
-	n = int(input("Enter 1 for Astar and 2 for Hill Climbing:"))
 
+	n = int(input("Enter 1 for Astar and 2 for Hill Climbing:"))
+	m = int(input("Enter the number of queens you what to work with:"))
+	start = timer()
 	if n==1:
-		m = int(input("Enter the number of queens you what to work with:"))
+
 		a=A_star(m)
 		print(a.state)
 		a.solver()
 		print(a.tempstate,a.total)
 	elif n==2:
-		m = int(input("Enter the number of queens you want to play with:"))
+		# m = int(input("Enter the number of queens you want to play with:"))
 		problem = Hill_climbing(m)
 		problem.solve_iterate()
 		# end = timer()
