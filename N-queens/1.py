@@ -1,18 +1,9 @@
 from subprocess import call
-
-# import os
-
-# def run(runfile):
-#   with open(runfile,"r") as rnf:
-#     exec(rnf.read())
-
 if __name__ == "__main__":
-    n = (input("Enter A for Astar and B for Hill Climbing"))
-    if n== "A":
+    n = int(input("Enter 1 for Astar and 2 for Hill Climbing:"))
+    if n== 1:
         call(["python3", "astar.py"])
-        # exec('astar.py')
-    elif n=="B":
+    elif n==2:
         call(["python3", "nqueens.py"])
-        # exec('nqueens.py')
     else:
         print("Invalid argument")
